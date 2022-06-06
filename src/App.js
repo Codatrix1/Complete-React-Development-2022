@@ -1,48 +1,48 @@
 import React from "react";
+import Directory from "./components/directory/directory.component";
 
-//---------------------
-// Main React Component
-//---------------------
-const App = function () {
+//-----------------
+// React Component
+//-----------------
+const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: "hats",
+      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+    },
+    {
+      id: 2,
+      title: "jackets",
+      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+    },
+    {
+      id: 3,
+      title: "sneakers",
+      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+    },
+    {
+      id: 4,
+      title: "womens",
+      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+      size: "large",
+    },
+    {
+      id: 5,
+      title: "mens",
+      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+      size: "large",
+    },
+  ];
+
   return (
-    <div className="categories-container">
-      <div className="category-container">
-        {/*<img src="" alt="" />*/}
-        <div className="category-body-container">
-          <h2>Hats</h2>
-          <span>Shop Now</span>
-        </div>
-      </div>
-      <div className="category-container">
-        {/*<img src="" alt="" />*/}
-        <div className="category-body-container">
-          <h2>Jackets</h2>
-          <span>Shop Now</span>
-        </div>
-      </div>
-      <div className="category-container">
-        {/*<img src="" alt="" />*/}
-        <div className="category-body-container">
-          <h2>Sneakers</h2>
-          <span>Shop Now</span>
-        </div>
-      </div>
-      <div className="category-container">
-        {/*<img src="" alt="" />*/}
-        <div className="category-body-container">
-          <h2>Womens</h2>
-          <span>Shop Now</span>
-        </div>
-      </div>
-      <div className="category-container">
-        {/*<img src="" alt="" />*/}
-        <div className="category-body-container">
-          <h2>Mens</h2>
-          <span>Shop Now</span>
-        </div>
-      </div>
-    </div>
+    <React.Fragment>
+      <Directory categories={categories} />
+    </React.Fragment>
   );
 };
 
+//----------------
+// Default Export
+//----------------
 export default App;
