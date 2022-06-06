@@ -14,7 +14,7 @@ const CategoryItem = ({ category }) => {
       />
       <div className="category-body-container">
         <h2>{title.toUpperCase()}</h2>
-        <span>Shop Now</span>
+        <span>SHOP NOW</span>
       </div>
     </div>
   );
